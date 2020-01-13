@@ -37,17 +37,18 @@ request2.onload = function() {
         card.setAttribute('class', 'card')
         container.appendChild(card)
 
-        const h1 = document.createElement('h1')
+        /*const h1 = document.createElement('h1')
         h1.textContent = game.gameName
-        card.appendChild(h1)
+        card.appendChild(h1)*/
 
-        const p = document.createElement('p')
+        /*const p = document.createElement('p')
         game.gameDescription = game.gameDescription.substring(0, 300)
         p.textContent = `${game.gameDescription}...`
-        card.appendChild(p)
+        card.appendChild(p)*/
 
         const gameLogo = document.createElement('img')
         gameLogo.src = data2.response.result.gameResourceServer + '/' + data2.response.result.gameClients[game.idgame].logo
+        gameLogo.style.maxWidth = "50%"
         if (game.gameStatus == 1) {
           gameLogo.onclick = function() { launchGame(this, data2.response.result.gameResourceServer + '/' + data2.response.result.gameClients[game.idgame].game) }
         } else {
@@ -56,8 +57,19 @@ request2.onload = function() {
           h2.textContent = 'Game is Disabled'
           card.appendChild(h2)
         }
-
         card.appendChild(gameLogo)
+
+        const gameDesign = document.createElement('img')
+        var gameDesignPart = data2.response.result.gameClients[game.idgame].logo
+        gameDesignPart = gameDesignPart.substring(gameDesignPart.lastIndexOf("/")+1,gameDesignPart.lastIndexOf("_"))
+        gameDesign.src = data2.response.result.gameResourceServer + '/gameDesign/' + gameDesignPart + '.png'
+        if (game.gameStatus == 1) {
+          gameDesign.onclick = function() { launchGame(this, data2.response.result.gameResourceServer + '/' + data2.response.result.gameClients[game.idgame].game) }
+        } else {
+          gameDesign.onclick = function() { alert ('Game is disabled')}
+        }
+
+        card.appendChild(gameDesign)
       }
     })
 
