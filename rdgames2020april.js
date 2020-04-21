@@ -10,6 +10,8 @@ function launchGame(id, gameURL) {
   }
 }
 
+// parse calling URL
+let myURL = new URL(window.location.href)
 
 const app = document.getElementById('games')
 
