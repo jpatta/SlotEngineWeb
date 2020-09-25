@@ -40,7 +40,7 @@ request2.onload = function() {
     data2.response.result.gameServers.forEach(game => {
       if (data2.response.result.gameClients[game.idgame]) {
         switch (game.idgame) {
-        case "Game1_97_v1":
+        //case "Game1_97_v1":
         case "Game2_97_v1":
         case "Game3_97_v1":
         case "Game4_97_v1":
@@ -54,7 +54,7 @@ request2.onload = function() {
         case "Game12_97_v1":
         //case "Game13_97_v1":
         case "Game14_97_v1":
-        //case "Game15_97_v1":
+        case "Game15_97_v1":
         case "Game16_97_v1":
         case "Game17_97_v1":
         case "Game18_97_v1":
