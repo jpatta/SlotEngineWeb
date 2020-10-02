@@ -4,7 +4,7 @@ function launchGame(id, gameURL) {
   if (playerToken) {
     var langItem = document.getElementById("langSelect");
     languageId = langItem.options[langItem.selectedIndex].value;
-    window.location.href = gameURL + '/index.html?playerToken=' + playerToken + '&currencyId=' + currencyId + '&lang='+ languageId + '&proxy=RD&casinoId='+casinoId
+    window.location.href = `${gameURL}/index.html?playerToken=${playerToken}&currencyId=${currencyId}&lang=${languageId}&proxy=RD&casinoId=${casinoId}&href=Return`
   } else {
     alert('Player token not selected');
   }
