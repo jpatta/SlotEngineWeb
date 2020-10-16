@@ -1,0 +1,218 @@
+<html>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/3/w3.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<style>
+.slideshow {
+    background-color: #333;
+}   
+
+div.scrollmenu {
+  background-color: #333;
+  overflow: auto;
+  white-space: nowrap;
+}
+
+div.scrollmenu a {
+  display: inline-block;
+  width: 25%;
+  text-align: center;
+  padding: 14px;
+  text-decoration: none;
+  transition: all 0.3s ease; /* Add transition for hover effects */
+}
+
+div.scrollmenu a:hover {
+  background-color: #777;
+} 
+
+.featured {
+    background-color: #333;
+    color:gray;
+    padding: 10px;
+}
+
+.gameImg {
+    height: auto;
+    width: 75%;
+}
+
+.glow {
+  font-size: 80px;
+  color: #fff;
+  text-align: center;
+  -webkit-animation: glow 1s ease-in-out  alternate;
+  -moz-animation: glow 1s ease-in-out alternate;
+  animation: glow 1s ease-in-out  alternate;
+}
+
+@-webkit-keyframes glow {
+  from {
+    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #e60073, 0 0 40px #e60073, 0 0 50px #e60073, 0 0 60px #e60073, 0 0 70px #e60073;
+  }
+  
+  to {
+    text-shadow: 0 0 20px #fff, 0 0 30px #ff4da6, 0 0 40px #ff4da6, 0 0 50px #ff4da6, 0 0 60px #ff4da6, 0 0 70px #ff4da6, 0 0 80px #ff4da6;
+  }
+}
+
+.checked {
+  color: orange;
+}
+
+.rating {
+    padding-top: 10px;
+}
+</style>
+
+
+<body>
+
+<!-- Navigation -->
+<nav class="w3-bar w3-black">
+  <a href="#home" class="w3-button w3-bar-item">Home</a>
+  <a href="#games" class="w3-button w3-bar-item">Games</a>
+  <a href="#tour" class="w3-button w3-bar-item">Register</a>
+  <a href="#contact" class="w3-button w3-bar-item">Login</a>
+</nav>
+
+<!-- Slide Show -->
+<div class="slideshow">
+  <img class="mySlides" src="https://cdn.rdsergs.com/gameDesign/Game17.png"
+  style="width:100%">
+  <img class="mySlides" src="https://cdn.rdsergs.com/gameDesign/Game18.png"
+  style="width:100%">
+  <img class="mySlides" src="https://cdn.rdsergs.com/gameDesign/Game19.png"
+  style="width:100%">
+  <img class="mySlides" src="https://cdn.rdsergs.com/gameDesign/Game20.png"
+  style="width:100%">
+  <img class="mySlides" src="https://cdn.rdsergs.com/gameDesign/Game21.png"
+  style="width:100%">
+  <img class="mySlides" src="https://cdn.rdsergs.com/gameDesign/Game22.png"
+  style="width:100%">
+  <img class="mySlides" src="https://cdn.rdsergs.com/gameDesign/Game23.png"
+  style="width:100%">
+  <img class="mySlides" src="https://cdn.rdsergs.com/gameDesign/Game24.png"
+  style="width:100%">
+  <img class="mySlides" src="https://cdn.rdsergs.com/gameDesign/Game25.png"
+  style="width:100%">
+</div>
+
+
+<!-- Featured Games  -->
+<div class="w3-container w3-padding-16 w3-center w3-black w3-xlarge">
+    <p class="glow" style="font-family: cursive; font-size: larger;">
+    Featured Games
+    </p>
+</div>
+
+<div class="featured">
+<section class="w3-row-padding w3-center">
+  <article class="w3-third">
+
+    <img src="https://cdn.rdsergs.com/gameLogos/Game09_Logo.png" alt="Game09" style="width:100%">
+    <div class="rating">
+        <span class="fa fa-star checked"></span>
+        <span class="fa fa-star checked"></span>
+        <span class="fa fa-star checked"></span>
+        <span class="fa fa-star checked" ></span>
+        <span class="fa fa-star checked"></span>
+    </div>
+    <p>Game1 is superb.</p>
+  </article>
+  <article class="w3-third">
+
+    <img src="https://cdn.rdsergs.com/gameLogos/Game24_Logo.png" alt="Game24" style="width:100%">
+    <div class="rating">
+        <span class="fa fa-star checked"></span>
+        <span class="fa fa-star checked"></span>
+        <span class="fa fa-star checked"></span>
+        <span class="fa fa-star checked"></span>
+        <span class="fa fa-star"></span>
+    </div>
+    <p>Game2 is awesome.</p>
+  </article>
+  <article class="w3-third">
+
+    <img src="https://cdn.rdsergs.com/gameLogos/Game10_Logo.png" alt="Game10" style="width:100%">
+    <div class="rating">
+    <span class="fa fa-star checked"></span>
+    <span class="fa fa-star checked"></span>
+    <span class="fa fa-star checked"></span>
+    <span class="fa fa-star checked"></span>
+    <span class="fa fa-star checked"></span>
+    </div>
+    <p>Game3 is the best.</p>
+  </article>
+</section>
+</div>
+
+
+<!-- Games Gallery -->
+<div class="w3-container w3-padding-16 w3-center w3-black w3-xlarge">
+    <p class="glow" style="font-family: cursive; font-size: larger;">
+    Games Gallery
+    </p>
+</div>
+
+<div class="scrollmenu">   
+    <a href="#game">
+    <img class="gameImg" src="https://cdn.rdsergs.com/gameLogos/Game20_Logo.png" width:100% onclick="currentSlide(1)" alt="Game 20"></a>
+    <a href="#game">
+    <img class="gameImg" src="https://cdn.rdsergs.com/gameLogos/Game21_Logo.png" width:100% onclick="currentSlide(2)" alt="Game 21"></a>
+    <a href="#game">
+    <img class="gameImg" src="https://cdn.rdsergs.com/gameLogos/Game22_Logo.png" width:100% onclick="currentSlide(3)" alt="Game 22"></a>
+    <a href="#game">
+    <img class="gameImg" src="https://cdn.rdsergs.com/gameLogos/Game23_Logo.png" width:100% onclick="currentSlide(4)" alt="Game 23"></a>
+    <a href="#game">
+    <img class="gameImg" src="https://cdn.rdsergs.com/gameLogos/Game24_Logo.png" width:100% onclick="currentSlide(5)" alt="Game 24"></a>
+    <a href="#game">
+    <img class="gameImg" src="https://cdn.rdsergs.com/gameLogos/Game25_Logo.png" width:100% onclick="currentSlide(6)" alt="Game 25"></a>
+    <a href="#game">
+    <img class="gameImg" src="https://cdn.rdsergs.com/gameLogos/Game17_Logo.png" width:100% onclick="currentSlide(6)" alt="Game 17"></a>
+    <a href="#game">
+    <img class="gameImg" src="https://cdn.rdsergs.com/gameLogos/Game18_Logo.png" width:100% onclick="currentSlide(6)" alt="Game 18"></a>
+    <a href="#game">
+    <img class="gameImg" src="https://cdn.rdsergs.com/gameLogos/Game19_Logo.png" width:100% onclick="currentSlide(6)" alt="Game 19"></a>
+</div>
+
+<!-- Footer -->
+<footer class="w3-container w3-padding-64 w3-center w3-black w3-xlarge">
+  <a href="#"><i class="fa fa-facebook-official"></i></a>
+  <a href="#"><i class="fa fa-pinterest-p"></i></a>
+  <a href="#"><i class="fa fa-twitter"></i></a>
+  <a href="#"><i class="fa fa-flickr"></i></a>
+  <a href="#"><i class="fa fa-linkedin"></i></a>
+  <p class="w3-medium">
+  Powered by <a href="https://www.slotengine.com" target="_blank">slotengine&reg;</a>
+  </p>
+</footer>
+
+<script>
+// Automatic Slideshow - change image every 3 seconds
+var myIndex = 0;
+carousel();
+
+
+function carousel() {
+  var i;
+  var x = document.getElementsByClassName("mySlides");
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";
+  }
+  myIndex++;
+  if (myIndex > x.length) {myIndex = 1}
+  x[myIndex-1].style.display = "block";
+  setTimeout(carousel, 3000);
+}
+
+function currentSlide(gameId) {
+
+}
+</script>
+
+</body>
+
+</html>
