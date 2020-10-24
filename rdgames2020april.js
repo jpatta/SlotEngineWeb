@@ -64,7 +64,7 @@ request2.onload = function() {
         case "Game22_97_v1":
         case "Game23_97_v1":
         case "Game24_97_v1":
-        //case "Game25_97_v1":
+        case "Game25_97_v1":
           const card = document.createElement('div')
           card.setAttribute('class', 'card')
 
