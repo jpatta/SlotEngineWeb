@@ -48,7 +48,7 @@ request2.onload = function() {
         case "Game6_97_v1":
         case "Game7_97_v1":
         case "Game8_97_v1":
-        //case "Game9_97_v1":
+        case "Game9_97_v1":
         case "Game10_97_v1":
         case "Game11_97_v1":
         //case "Game12_97_v1":
@@ -64,10 +64,9 @@ request2.onload = function() {
         case "Game22_97_v1":
         case "Game23_97_v1":
         case "Game24_97_v1":
-        case "Game25_97_v1":
+        //case "Game25_97_v1":
           const card = document.createElement('div')
           card.setAttribute('class', 'card')
-          container.appendChild(card)
 
           /*const h1 = document.createElement('h1')
           h1.textContent = game.gameName
@@ -95,13 +94,20 @@ request2.onload = function() {
           var gameDesignPart = data2.response.result.gameClients[game.idgame].logo
           gameDesignPart = gameDesignPart.substring(gameDesignPart.lastIndexOf("/")+1,gameDesignPart.lastIndexOf("_"))
           gameDesign.src = data2.response.result.gameResourceServer + '/gameDesign/' + gameDesignPart + '.png'
+          card.appendChild(gameDesign)
+
           if (game.gameStatus == 1) {
+            //enabled and ok
             gameDesign.onclick = function() { launchGame(this, data2.response.result.gameResourceServer + '/' + data2.response.result.gameClients[game.idgame].game) }
+            container.appendChild(card)
+          } else if (game.gameStatus == 0) {
+            // disabled and invisible  
           } else {
+            // disabled for any reason
             gameDesign.onclick = function() { alert ('Game is disabled')}
+            container.appendChild(card)
           }
 
-          card.appendChild(gameDesign)
           break;
         
           default:
