@@ -45,26 +45,26 @@ request2.onload = function() {
         case "Game3_97_v1":
         case "Game4_97_v1":
         case "Game5_97_v1":
-        case "Game6_97_v1":
-        case "Game7_97_v1":
-        case "Game8_97_v1":
-        case "Game9_97_v1":
-        case "Game10_97_v1":
-        case "Game11_97_v1":
+        //case "Game6_97_v1":
+        //case "Game7_97_v1":
+        //case "Game8_97_v1":
+        //case "Game9_97_v1":
+        //case "Game10_97_v1":
+        //case "Game11_97_v1":
         //case "Game12_97_v1":
         //case "Game13_97_v1":
-        case "Game14_97_v1":
+        //case "Game14_97_v1":
         //case "Game15_97_v1":
-        case "Game16_97_v1":
+        //case "Game16_97_v1":
         //case "Game17_97_v1":
-        case "Game18_97_v1":
-        case "Game19_97_v1":
-        case "Game20_97_v1":
-        case "Game21_97_v1":
-        case "Game22_97_v1":
-        case "Game23_97_v1":
+        //case "Game18_97_v1":
+        //case "Game19_97_v1":
+        //case "Game20_97_v1":
+        //case "Game21_97_v1":
+        //case "Game22_97_v1":
+        //case "Game23_97_v1":
         case "Game24_97_v1":
-        case "Game25_97_v1":
+        //case "Game25_97_v1":
           const card = document.createElement('div')
           card.setAttribute('class', 'card')
 
