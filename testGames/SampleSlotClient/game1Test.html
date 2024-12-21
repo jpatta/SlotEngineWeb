@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta author="Julius Patta, Digital Game Systems Corp"/>
+
+    <title>SlotEngine&reg; Game1 (Slot) Test</title>
+  
+    <link href="https://fonts.googleapis.com/css?family=Dosis:400,700" rel="stylesheet" />
+    <link href="style.css" rel="stylesheet" />
+  </head>
+
+  <body>
+
+    <div>
+    <p>SlotEngine® Game1 Test, latest version: January 26, 2020</p>
+    </div>
+    
+    <div id="root">
+      <div class="container">
+        <div class="card">
+          
+          <h1>Game1 Example</h1>
+          
+          <div>
+            <p id="countdown">Time to token Expiry</p>
+            <p id="playertokenL">Player: <input id="playerToken" type="text">
+                <button id="tokChangeButton" onclick="tokenChange()" type="button">Change Token</button>
+            </p>
+            <p id="details"> </p>
+            <p id="roundid">Round Id: </p>
+            </tr>
+          </div>
+          
+
+          <table class="jackpotTable">
+            <th colspan=4>Jackpots</th>
+            <tr>
+              <td id="GRANDlabel">GRAND</td>
+              <td id="MAJORlabel">MAJOR</td>
+              <td id="MINORlabel">MINOR</td>
+              <td id="MINIlabel">MINI</td>
+            </tr>
+            <tr>
+              <td id="GRAND">0</td>
+              <td id="MAJOR">0</td>
+              <td id="MINOR">0</td>
+              <td id="MINI">0</td>
+            </tr>
+          </table>
+
+
+          <table>
+            <th colspan=5>RNG outcome</th>
+            <tr>
+              <td id="td1">0</td>
+              <td id="td2">0</td>
+              <td id="td3">0</td>
+              <td id="td4">0</td>
+              <td id="td5">0</td>
+            </tr>
+          </table>
+
+
+          <table class="symbolsTable">
+            <th colspan=5>Slot symbols</th>
+            <tr>
+              <td id="r0l0">None</td>
+              <td id="r1l0">None</td>
+              <td id="r2l0">None</td>
+              <td id="r3l0">None</td>
+              <td id="r4l0">None</td>
+            </tr>
+            <tr>
+              <td id="r0l1">None</td>
+              <td id="r1l1">None</td>
+              <td id="r2l1">None</td>
+              <td id="r3l1">None</td>
+              <td id="r4l1">None</td>
+            </tr>
+            <tr>
+              <td id="r0l2">None</td>
+              <td id="r1l2">None</td>
+              <td id="r2l2">None</td>
+              <td id="r3l2">None</td>
+              <td id="r4l2">None</td>
+            </tr>  
+          </table>
+
+
+          <table class="outcomeTable">
+            <tr>
+              <td>Balance: <div id="balance">0</div></td>
+              <td>Bet: <div id="bet">0</div></td>
+              <td>Won: <div id="won">0</div></td>
+            </tr>
+          </table>
+
+          <table class="betButtonTable">
+            <tr>
+            <td>base bet <input id="betField" type="number" value="1" min=1 max=1000></input>
+              multiplier <input id="betMultiplier" type="number" value="1" min=1 max=99></input></td>
+            <td><button id="betButton" onclick="playerBet()" type="button">BET</button>
+            </tr>
+            <tr>
+              <td>denom <input id="denomField" type="number" value="0.01" min=0.01 max=10></input></td>
+              <td><button id="denomButton" onclick="playerDenom()" type="button">DENOM</button></td>
+            </tr> 
+          </table>
+
+          <div> 
+            <p id="gamemsg">Hello Game1</p>
+          </div>
+
+          <table>
+            <tr>
+              <td><button id="spinButton" onclick="playerPlay()" type="button">SPIN</button></td>         
+              <td><button id="replayButton" onclick="playerReplay()" type="button">REPLAY</button></td>
+            </tr>
+          </table>
+          
+        </div>
+      </div>
+ 
+      <script src="../CommonSlotEngineJS/slotEngineAPI.js"></script>
+      <script src="game1Test.js"></script>
+    </div>
+  </body>
+</html>
